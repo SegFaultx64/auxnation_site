@@ -1,0 +1,224 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+  <link rel="stylesheet" href="/devices.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "Jack Frost";
+      src: url("/fonts/Jack Frost.otf");
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: #000;
+      color: white;
+      font-family: "Lato", sans-serif;
+    }
+
+    .video-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events:none;
+    }
+
+    .video-container video {
+      /* Make video to at least 100% wide and tall */
+      min-width: 100vw;
+      min-height: 100vh;
+
+      /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+      width: auto;
+      height: auto;
+
+      /* Center the video */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    video {
+      opacity: 0.45;
+    }
+
+    h1 {
+      font-family: "Jack Frost", sans-serif;
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      padding: 25px;
+      color: #59C5D2;
+    }
+
+    ::selection { background: #59C5D2; }
+
+    h2::selection {
+      background: white;
+    }
+
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 25px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      text-align: left;
+      padding: 25px;
+    }
+
+    .container {
+      padding: 50px;
+
+      max-width: 1080px;
+      margin: 0 auto;
+
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .left {
+      padding: 25px;
+      width: 38.2%;
+      float: left;
+    }
+
+    .right {
+      padding: 25px;
+      width: 61.8%;
+      float: left;
+      display: flex;
+    }
+
+    b {
+      font-weight: bold;
+    }
+
+    input {
+      display: block;
+      color: white;
+      background: rgba(0, 0, 0, 0.1);
+      transition: all 400ms ease-in-out;
+    }
+
+    input[type=text], input[type=email] {
+      border: none;
+      border-bottom: 5px solid rgba(255,255,255,0.25);
+      margin-bottom: 15px;
+      font-size: 1.75rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    input[type=text]:focus, input[type=email]:focus {
+      border-bottom: 5px solid rgba(255,255,255,1);
+    }
+
+    ::-webkit-input-placeholder {
+      color: #CCC;
+    }
+
+    input[type=submit] {
+      padding: 10px;
+      font-size: 1.75rem;
+      border: 5px solid rgba(255,255,255,1);
+      margin: 45px auto;
+      transition: all 400ms ease-in-out;
+      min-width: 250px;
+    }
+
+    input[type=submit]:hover {
+      background: rgba(255,255,255,0.75);
+      color: black;
+    }
+
+    input[type=submit]:active {
+      background: rgba(255,255,255,1);
+      color: black;
+    }
+
+    .marvel-device {
+      margin: 0 auto;
+    }
+
+    .marvel-device img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .footer {
+      text-align: center;
+      bottom: 15px;
+      position: absolute;
+      width: 100%;
+    }
+
+    a {
+      color: white;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay="" muted="muted" loop="loop" preload="auto" poster="/images/poster.jpg" class="background" id="vid" webkit-playsinline>
+      <!-- MP4 source must come first for iOS -->
+      <source type="video/mp4" src="/vid/background.mp4">
+      Boo! Your browser does not support HTML 5 video.
+    </video>
+  </div>
+  <div class="container">
+    <h1>AuxNation</h1>
+    <h2>We integrate the audience into the preformance</h2>
+    <h2>Coming Soon...</h2>
+    <div class="left">
+      <h3>Sign up for updates</h3>
+      <form action="http://auxnation.com/prod/API/web/subscribe.php" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <input type="submit" value="Let's Go!">
+      </form>
+      <h4><b>DJs:</b><br>Get paid in live song auctions</h4>
+      <h4><b>Partygoers:</b><br>Hear the music you want when you go out!</h4>
+    </div>
+    <div class="right">
+      <div class="marvel-device iphone5s silver">
+          <div class="top-bar"></div>
+          <div class="sleep"></div>
+          <div class="volume"></div>
+          <div class="camera"></div>
+          <div class="sensor"></div>
+          <div class="speaker"></div>
+          <div class="screen">
+            <img src="/images/phone.jpg" alt="">
+          </div>
+          <div class="home"></div>
+          <div class="bottom-bar"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <i class="fa fa-copyright"></i><script>document.write(new Date().getFullYear())</script>&nbsp;AuxNation&nbsp;&nbsp;-&nbsp;
+      <a href="https://www.facebook.com/auxnationapp/"><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('vid').play();
+  </script>
+</body>
+</html>
